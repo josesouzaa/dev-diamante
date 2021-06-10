@@ -1,0 +1,41 @@
+#news {
+  background: $color1;
+}
+
+.news-cont {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  @include d(ss) {
+    grid-template-columns: 290px;
+    justify-content: center;
+  }
+}
+
+.inscrevase,
+.assine {
+  color: white;
+  padding-bottom: 1.5rem;
+  p {
+    font-family: $fonte1;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  a {
+    display: block;
+    width: 50%;
+    font-family: $fonte1;
+    // text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: $black2;
+    text-align: center;
+    background-color: lightgray;
+    padding: 0.5rem 0;
+    border: 2px solid darken($color1, 5%);
+    border-radius: 0.5rem;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+    &:hover {
+      animation: upplano 0.5s ease-in forwards;
+    }
+  }
+}

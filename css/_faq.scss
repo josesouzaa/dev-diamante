@@ -1,0 +1,55 @@
+.faq-color {
+  background: $black2;
+}
+
+#faq {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  color: white;
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    &::after {
+      display: block;
+      content: "";
+      width: 10%;
+      height: 2px;
+      background-color: white;
+      margin: 0.8rem auto 0 auto;
+    }
+  }
+}
+
+table {
+  width: 80%;
+  margin: 0 auto;
+  th {
+    cursor: pointer;
+    display: block;
+    border: 1px solid $black5;
+    border-radius: 0.4rem 0.4rem 0 0;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    &:hover {
+      transform: scale(101%);
+      background: linear-gradient(120deg, $color1, $color3);
+    }
+  }
+  td {
+    display: none;
+    transform: translateY(-1rem);
+    padding: 2rem;
+    border-left: 1px solid $black5;
+    border-bottom: 1px solid $black5;
+    border-right: 1px solid $black5;
+  }
+  th.ativo {
+    background: linear-gradient(120deg, $color1, $color3);
+    &:hover {
+      transform: none;
+    }
+  }
+  td.ativo {
+    display: block;
+  }
+}

@@ -1,0 +1,66 @@
+#intro-bg {
+  background: url(../imgs/code-bg.jpg) no-repeat center;
+  background-size: cover;
+  position: relative;
+  padding: 4rem 0;
+  &::after {
+    content: "";
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+  }
+}
+
+#intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  z-index: 10;
+  h1 {
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    @include d(ss) {
+      font-size: 2.5rem;
+    }
+  }
+  p {
+    max-width: 400px;
+    color: white;
+    text-align: center;
+  }
+  a {
+    width: 290px;
+    font-family: monospace;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    background-color: $color1;
+    padding: 1rem 0;
+    border: 2px solid darken($color1, 5%);
+    border-radius: 0.5rem;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+    @include d(ss) {
+      width: 250px;
+    }
+    &:hover {
+      animation: hoverbtn 0.5s ease-in forwards;
+    }
+  }
+}
+
+@keyframes hoverbtn {
+  to {
+    background-color: lighten($color1, 5%);
+  }
+}

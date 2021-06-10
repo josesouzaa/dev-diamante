@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap");
+
+$fonte1: "Montserrat", sans-serif;
+$fonte2: "Open Sans", sans-serif;
+$color1: #716ff0;
+$color2: #66b0f8;
+$color3: #5978d9;
+$black1: #191919;
+$black2: #2c2c2c;
+$black3: #3f3f3f;
+$black4: #6a6a6a;
+$black5: #808080;
+
+@import "geral";
+@import "menu";
+@import "intro";
+@import "cursos";
+@import "conteudo";
+@import "planos";
+@import "faq";
+@import "news";
+@import "footer";

@@ -1,0 +1,74 @@
+* {
+  font-family: $fonte2;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $fonte1;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+ul,
+li,
+a,
+div {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background-color: $black1;
+}
+
+.container {
+  padding: 0 1rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+@mixin d($dispositivo) {
+  @if $dispositivo == m {
+    @media only screen and (min-width: 700px) and (max-width: 959px) {
+      @content;
+    }
+  } @else if $dispositivo == s {
+    @media only screen and (min-width: 570px) and (max-width: 699px) {
+      @content;
+    }
+  } @else if $dispositivo == ss {
+    @media only screen and (max-width: 569px) {
+      @content;
+    }
+  }
+}
+
+@include d(m) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+@include d(s) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+@include d(ss) {
+  html {
+    font-size: 87.5%;
+  }
+}

@@ -1,0 +1,28 @@
+#footer-color {
+  background: darken($color1, 5%);
+  padding: 1rem 0;
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: end;
+    @include d(ss) {
+      grid-template-columns: 290px;
+      justify-content: center;
+      justify-items: start;
+    }
+    p {
+      color: white;
+      font-weight: 200;
+      font-size: 0.8rem;
+    }
+    h4 {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: white;
+      img {
+        width: 1.5rem;
+      }
+    }
+  }
+}

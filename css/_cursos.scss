@@ -1,0 +1,73 @@
+#cursos {
+  color: white;
+  padding: 3rem 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  h2 {
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    &::after {
+      display: block;
+      content: "";
+      width: 40%;
+      height: 1px;
+      background-color: white;
+      margin: 0.8rem auto 0 auto;
+    }
+  }
+  p {
+    width: 80%;
+    text-align: center;
+    line-height: 1.5rem;
+  }
+}
+
+#cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  @include d(ss) {
+    grid-template-columns: 290px;
+    justify-content: center;
+  }
+  .card {
+    background: $black2;
+    padding: 0.5rem;
+    border-radius: 0.8rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    h3 {
+      font-size: 1.2rem;
+      &::after {
+        display: block;
+        content: "";
+        width: 40%;
+        height: 2px;
+        background-color: white;
+        margin: 0.3rem auto 0 auto;
+      }
+    }
+    img {
+      margin-top: 0.5rem;
+      padding: 0.5rem;
+      position: relative;
+    }
+    p {
+      margin: 0;
+      padding: 0 0.8rem 0.8rem 0.8rem;
+      text-align: center;
+    }
+    &:hover {
+      border: solid 2px $color1;
+    }
+  }
+}

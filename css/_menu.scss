@@ -1,0 +1,100 @@
+.menu-bg {
+  background: $black1;
+}
+
+nav {
+  padding: 0.5rem 0;
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h1 {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: white;
+    img {
+      width: 2rem;
+    }
+  }
+  ul {
+    display: flex;
+    gap: 1rem;
+    li {
+      @include d(ss) {
+        width: 100%;
+        cursor: pointer;
+        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+        text-align: right;
+      }
+      &:hover {
+        @include d(ss) {
+          background: $color1;
+        }
+      }
+      a {
+        background-color: $black2;
+        padding: 0.5rem;
+        border-radius: 0.8rem;
+        font-weight: 600;
+        color: $color1;
+        @include d(ss) {
+          background-color: unset;
+          color: white;
+          border-radius: 0;
+          padding: 0;
+        }
+        &:hover {
+          animation: hovermenu 0.5s ease-in forwards;
+          @include d(ss) {
+            animation: unset;
+          }
+        }
+      }
+    }
+  }
+  button {
+    display: none;
+    cursor: pointer;
+    background-color: $black2;
+    padding: 0.5rem;
+    border-radius: 0.8rem;
+    font-weight: 600;
+    color: $color1;
+    box-shadow: none;
+    border: none;
+    &:hover {
+      animation: hovermenu 0.5s ease-in forwards;
+    }
+  }
+}
+
+@keyframes hovermenu {
+  to {
+    color: white;
+    background-color: $color1;
+  }
+}
+
+@media only screen and (max-width: 569px) {
+  nav button {
+    display: block;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul.ativo {
+    width: 290px;
+    background: $black1;
+    position: absolute;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    top: 46px;
+    right: 0;
+    gap: 0;
+    border-radius: 0.4rem;
+  }
+}

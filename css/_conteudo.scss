@@ -1,0 +1,77 @@
+#conteudo {
+  margin-bottom: 3rem;
+}
+
+.conteudo-titulo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  img {
+    width: 2rem;
+  }
+  h3 {
+    color: white;
+  }
+}
+
+.pages-conteudo {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  position: relative;
+  z-index: 10;
+  a.ativo {
+    background: $color1;
+  }
+  a {
+    background: $black1;
+    text-align: center;
+    border: 1px solid $black5;
+    padding: 0.5rem;
+    font-family: $fonte1;
+    color: white;
+    font-weight: 600;
+    &:first-child {
+      border-radius: 0.4rem 0 0 0;
+    }
+    &:last-child {
+      border-radius: 0 0.4rem 0 0;
+    }
+    &:hover {
+      background: $color1;
+    }
+  }
+}
+
+.box-conteudo {
+  display: none;
+  ul {
+    transform: translateY(-1rem);
+    padding: 2rem;
+    width: 100%;
+    border-left: 1px solid $black5;
+    border-bottom: 1px solid $black5;
+    border-right: 1px solid $black5;
+    li {
+      color: white;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &::before {
+        content: "";
+        display: inline-block;
+        background: url(../imgs/diamond.svg) no-repeat center;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+.box-conteudo.ativo {
+  display: block;
+}

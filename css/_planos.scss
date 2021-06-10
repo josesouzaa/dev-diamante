@@ -1,0 +1,120 @@
+#planos {
+  background-color: lighten($color1, 5%);
+}
+
+div.planos-cont {
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  @include d(s) {
+    grid-template-columns: 1fr;
+    padding-bottom: 2rem;
+  }
+  @include d(ss) {
+    display: grid;
+    grid-template-columns: 290px;
+    justify-content: center;
+    padding-bottom: 2rem;
+  }
+}
+
+.planos-titulo {
+  padding: 2rem 0;
+  h2 {
+    font-size: 3rem;
+    font-weight: 400;
+    span {
+      font-family: $fonte1;
+      font-weight: bold;
+      color: white;
+    }
+  }
+  ul {
+    padding: 2rem 0 0 1rem;
+    li {
+      color: $black2;
+      list-style: disc;
+      font-family: $fonte1;
+      font-weight: bold;
+      line-height: 2rem;
+    }
+  }
+}
+
+.planos-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  align-items: center;
+  @include d(ss) {
+    grid-template-columns: 290px;
+  }
+}
+
+.mensal,
+.trimestral,
+.anual {
+  color: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  &:hover {
+    animation: upplano 0.8s ease-in-out forwards;
+  }
+  p {
+    font-family: $fonte1;
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+  span {
+    display: block;
+    font-family: $fonte1;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 1rem 0 0 0;
+  }
+  span.preco {
+    font-size: 2rem;
+    padding-bottom: 1.5rem;
+  }
+  small {
+    display: block;
+    transform: translateY(1rem);
+  }
+  a {
+    display: block;
+    width: 100%;
+    font-family: monospace;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    background-color: $color1;
+    padding: 0.5rem 0;
+    border: 2px solid darken($color1, 5%);
+    border-radius: 0.5rem;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+    &:hover {
+      animation: hoverbtn 0.5s ease-in forwards;
+    }
+  }
+}
+
+div.mensal {
+  background: $black3;
+}
+
+div.trimestral {
+  background: $black2;
+}
+
+div.anual {
+  background: linear-gradient($color1, $color3);
+}
+
+@keyframes upplano {
+  to {
+    transform: translateY(-10px);
+  }
+}
